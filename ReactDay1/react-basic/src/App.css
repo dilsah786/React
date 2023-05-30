@@ -1,0 +1,8 @@
+.App {
+  text-align: center;
+}
+
+.avatar{
+  border-radius: 50%;
+  position: sticky;
+}
