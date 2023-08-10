@@ -1,0 +1,42 @@
+.about-component{
+    margin-top: 15%;
+    background-color:#111933;
+    margin-top: 0px;
+    padding-top:50px ;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+.about_text h1{
+    text-decoration: underline;
+    text-decoration-color: aquamarine;
+    text-decoration-thickness:2px ;
+    margin-bottom: 2px;
+    font-family: serif;
+}
+.aboutimage{
+    width: 300px;
+    height: 350px;
+    border-radius: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.hire{
+    color: white;
+}
+.hire-resume-Div{
+    display: flex;
+    justify-content: space-evenly;
+}
+.hire-resume-Div .btn{
+    height: 40px;
+    color:rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: 600;
+    font-family: "Lucida Console", "Courier New", monospace;
+    border-radius: 8px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: linear-gradient(to right, #0aebd8, #1088dd);
+}

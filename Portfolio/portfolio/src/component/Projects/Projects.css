@@ -1,0 +1,16 @@
+.Project_component{
+    background-color: black;
+    margin-top: -22px;
+}
+.flexDiv{
+    display: flex;
+   margin-left: 10%;
+   margin-right: 10%;
+   gap: 10%;
+   margin-top: 100px;
+
+}
+.project-Title{
+    text-align: center;
+    padding-top: 50px;
+}

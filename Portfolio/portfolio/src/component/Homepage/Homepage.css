@@ -1,0 +1,34 @@
+.homepage_component{
+    background-color: #1a2342;
+    margin-top: -100px;
+}
+.homepage{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+    padding-top:50px ;
+    padding-bottom: 50px;
+}
+.homeImage img{
+    border-radius:50px ;
+}
+.homeTextDiv{
+margin-top: 50px;
+}
+.homeTextDiv button{
+    height: 40px;
+    color:rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: 600;
+    font-family: "Lucida Console", "Courier New", monospace;
+    border-radius: 8px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: linear-gradient(to right, #0aebd8, #1088dd);
+}
+.about{
+    text-align: center;
+    color: rgb(255, 255, 255);
+}

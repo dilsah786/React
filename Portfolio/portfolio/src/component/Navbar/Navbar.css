@@ -1,0 +1,45 @@
+*{
+    color: aliceblue;
+}
+.navbar_component{
+    background-color: #111933;
+    margin-top: -80px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-bottom: 0.1px solid rgb(105, 105, 105);
+}
+.logo{
+    border-radius: 50%;
+}
+.name-logo{
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+}
+.nav{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5%;
+    
+}
+.NavItems ul{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+    margin-top: 6%;
+}
+.NavItems button{
+    height: 40px;
+    color:rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: 600;
+    font-family: "Lucida Console", "Courier New", monospace;
+    border-radius: 8px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: linear-gradient(to right, #0aebd8, #1088dd);
+    
+}
