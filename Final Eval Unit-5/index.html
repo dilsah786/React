@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/home.css" />
+    <!-- <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/skeleton.css" />
+    <link rel="stylesheet" href="styles/style.css" /> -->
+  </head>
+
+  <body>
+    <div id="container">
+      <div>
+        <div id="Sidebar">
+          <div id="Profile">
+            <img
+              src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=580&q=80"
+              alt="User_profile"
+            />
+            <p id="date"></p>
+            <p id="time"></p>
+          </div>
+
+          <h4>Sort Based On publish date</h4>
+          <button id="newest-first" class="u-full-width button button-primary">
+            Newest first
+          </button>
+          <br />
+          <button id="oldest-first" class="u-full-width button button-primary">
+            oldest first
+          </button>
+          <hr />
+
+          <div id="options">
+            <h4>Filter Based On category</h4>
+            <table>
+              <tbody>
+                <tr>
+                  <td>✈️</td>
+                  <td>
+                    <button id="filter-International">International</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>🏢</td>
+                  <td><button id="filter-Business">Business</button></td>
+                </tr>
+                <tr>
+                  <td>📽️</td>
+                  <td>
+                    <button id="filter-Entertainment">Entertainment</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>🏏</td>
+                  <td><button id="filter-Sports">Sports</button></td>
+                </tr>
+                <tr>
+                  <td>🏥</td>
+                  <td><button id="filter-Health">Health</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div id="Dashboard">
+          <div id="welcome">
+           <!-- Add welcome title in h2 tag here -->
+           <h2>Welcome, Peter</h2>
+          </div>
+
+          <div class="data-list-wrapper" id="data-list-wrapper">
+            <!-- append card-list that includes card here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./scripts/index.js" type="module"></script>
+</html>
