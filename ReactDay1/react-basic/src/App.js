@@ -1,48 +1,20 @@
-
-import './App.css';
-import ShoppingList from './component/button.js'
-
-
+import React from "react";
+import About from "./component/About";
+import { createContext } from "react";
 
 
-let MyButton =()=>{
-  return(
-    <button >I am a Button</button>
-    
-  );
-}
-
-
-
-
-
-
+export const MyContext = createContext();
+const App = () => {
  
-  const user = {
-    name: 'Hedy Lamarr',
-    imageUrl: 'https://i.imgur.com/yXOvdOSs.jpg',
-    imageSize: 90,
-  
-  }
-  
-
-  
-
-
-function App() {
   return (
-    <> 
-    <div className="App">
-      <h1>hello</h1>
-      <MyButton/>
-      <h1>{user.name}</h1>
-
-<img className='avatar'
-src={user.imageUrl} alt={'image of '+ user.name}/>      
+    <div>
+      <h1>Hello I am App Component</h1>
+      <MyContext.Provider value={{name:"Dilnawaz" , vill:"Kapasiya"}}>
+        <About/>
+      </MyContext.Provider>
+      
     </div>
-    <ShoppingList/>
-    </>
   );
-}
+};
 
 export default App;
