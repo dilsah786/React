@@ -3,22 +3,25 @@ import { useState } from "react";
 import Show from "./Show";
 
 const Fetch = () => {
-  const [data, setData] = useState([]);
+  const [apidata, setApidata] = useState([]);
 
-  const fetchData =async ()=> {
+  const fetchData = async () => {
     let result = await fetch(`https://tours-data-3ajf.onrender.com/Tours`);
     let res = await result.json();
-    setData(res);
-
-  }
-  console.log(data);
+    setApidata(res);
+    //console.log(data)
+  };
+  console.log(apidata);
+  //fetchData();
   return (
     <div>
-      <button>Click me</button>
-      {data?.map((elem) => {
-        <Show key={elem.id} {...elem} />;
-      })}:
-      
+      <button onClick={fetchData}>Click Me</button>
+
+      {apidata.map((elem) => {
+       
+
+        <Show key={elem.id} elem={elem} />;
+      })}
     </div>
   );
 };

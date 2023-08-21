@@ -1,6 +1,7 @@
 .Project_component{
-    background-color: black;
+    background-color: #1a2342;
     margin-top: -22px;
+    padding-bottom: 50px;
 }
 .flexDiv{
     display: flex;

@@ -7,6 +7,7 @@ import {Route ,Routes} from "react-router-dom"
 import About from './component/AboutMe/About';
 import Projects from './component/Projects/Projects';
 import Experience from './component/Experience/Experience';
+import Contact from './component/Contact/Contact';
 function App() {
   return (
     <div className="App">
@@ -15,6 +16,7 @@ function App() {
       <About/>
       <Projects/>
       <Experience/>
+      <Contact/>
 
 <BrowserRouter>
   <Routes>
