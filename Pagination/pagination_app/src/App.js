@@ -9,7 +9,8 @@ function App() {
   const [currPage, setCurrPage] = useState(1);
   const [limit, setLimit] = useState(5);
   const [selectedOption, setSelectedOption] = useState();
-
+  const [paginate, setPaginate] = useState([]);
+  const [activePage, setActivePage] = useState(1);
   // handling the Page_Limit option for the current page
 
   const handleOptionClick = (event) => {
@@ -41,14 +42,17 @@ function App() {
 
   useEffect(() => {
     fetchApiData(currPage, limit);
+    pagination();
   }, [currPage, limit]);
 
   //  Setting the page value for diffrenet page in case on Next button and Prev button
   function handleNextBtn() {
     setCurrPage(currPage + 1);
+    setActivePage(currPage + 1);
   }
   function handlePreBtn() {
     setCurrPage(currPage - 1);
+    setActivePage(currPage - 1);
   }
 
   // handling the Dynamic Page Buttons
@@ -56,23 +60,36 @@ function App() {
   let total_page = Math.ceil(copyData.length / limit);
   console.log("total_page  -> " + total_page);
 
+  const pagination = () => {
+    const pages = Array.from({ length: total_page }, (_, index) => index + 1);
+    setPaginate(pages);
+  };
 
-  for (let i = 1; i <= total_page; i = i++) {
-    console.log(i);
+  function handlePaginate(page) {
+    setCurrPage(page);
   }
 
+  if (limit * currPage > copyData.length) {
+    setCurrPage(total_page);
+  }
 
-
+  console.log(limit);
+  console.log(currPage);
 
   return (
     <div className="App">
       <h1>Hello Insta People</h1>
       <div>
-        <button onClick={handlePreBtn} disabled={currPage === 1}>
+        <button onClick={handlePreBtn} disabled={currPage <= 1}>
           Prev{" "}
         </button>
         <button>{currPage}</button>
-        <button onClick={handleNextBtn} disabled={currPage === total_page}>
+        <button
+          onClick={handleNextBtn}
+          disabled={
+            currPage === total_page || limit * currPage > copyData.length
+          }
+        >
           Next
         </button>
       </div>
@@ -93,6 +110,15 @@ function App() {
         <option>200</option>
         <option>500</option>
       </select>
+      {paginate.map((index) => (
+        <button
+          onClick={() => handlePaginate(index)}
+          key={index}
+          className={activePage === index ? "active" : ""}
+        >
+          {index}
+        </button>
+      ))}
 
       {data.map((users) => {
         return <Pagination key={users.id} {...users} />;
