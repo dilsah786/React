@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios"
 import Datacard from "./dataCard";
+
 
 const Data = () => {
   const [data, setData] = useState([]);
 
   async function fetchData() {
     try {
-      let result = await fetch(`https://tours-data-3ajf.onrender.com/Tours`);
+      let result = await axios.get(`https://tours-data-3ajf.onrender.com/Tours`);
       let res = await result.json();
       setData(res);
     } catch (err) {
