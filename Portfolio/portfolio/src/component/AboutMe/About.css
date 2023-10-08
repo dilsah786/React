@@ -40,3 +40,10 @@
     padding-right: 20px;
     background: linear-gradient(to right, #0aebd8, #1088dd);
 }
+.btn:hover{
+    font-weight: 600;
+ 
+    font-family: "Lucida Console", "Courier New", monospace;
+    background: linear-gradient(to left, #0aebd8, #1088dd);
+    cursor: pointer;
+}

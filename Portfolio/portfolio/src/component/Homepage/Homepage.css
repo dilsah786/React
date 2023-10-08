@@ -1,6 +1,7 @@
 .homepage_component{
     background-color: #1a2342;
     margin-top: -100px;
+    padding-bottom: 100px;
 }
 .homepage{
     display: flex;
@@ -9,11 +10,10 @@
     padding-top:50px ;
     padding-bottom: 50px;
 }
-.homeImage img{
-    border-radius:50px ;
-}
+
 .homeTextDiv{
 margin-top: 50px;
+
 }
 .homeTextDiv button{
     height: 40px;
@@ -31,4 +31,31 @@ margin-top: 50px;
 .about{
     text-align: center;
     color: rgb(255, 255, 255);
+}
+button:hover{
+    font-weight: 600;
+ 
+    font-family: "Lucida Console", "Courier New", monospace;
+    background: linear-gradient(to left, #0aebd8, #1088dd);
+    cursor: pointer;
+}
+
+
+.homeImage {
+    width: 600px;
+    height: 400px;
+    margin-top: -20px;
+    border-radius: 15px;
+    position: absolute;
+    right: 100px; /* Initially, the image is hidden to the right */
+    animation: slideToLeft 1s linear 1; /* Adjust the duration as needed */
+}
+
+@keyframes slideToLeft {
+    0% {
+        right: -200px;
+    }
+    100% {
+        right: 0; /* The image will slide all the way to the left */
+    }
 }

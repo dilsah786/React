@@ -2,6 +2,7 @@
     background-color: #111933;
     margin-top:-20px ;
     padding-top:20px ;
+    padding-bottom: 50px;
 }
 
 .language_logo img{
@@ -14,7 +15,7 @@
 
 .language_logo{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(4,1fr);
     gap:50px;
     margin-top: 20px;
     margin-bottom: 20px;
